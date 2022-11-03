@@ -47,8 +47,7 @@ If the WiFi connection is poor, it may take a little longer to establish a conne
 
 # Reset
 
-If, contrary to expectations, the software hangs or the password for the WiFi has changed, there is only one way to reset the Pico W and that is to detonate a nuke in the true sense of the word. First, the Pico W must be connected to the computer. However, while plugging in the USB cable, the BOOTSelect button on the Pico W must be pressed. The Pico W should now show up as a drive again. To reset the Pico W now, we need to untip and then copy [this](https://github.com/RaptusBube/Raspberry-Pi-PicoW-DHT11/files/9933011/picow_dht11.zip) firmware to the folder of the Pico W. The Pico W should now disconnect by itself and reconnect after a short time. After that, the Pico W should be treated as an unused Pico W and can be put on again according to the instructions.
-
+If, contrary to expectations, the software hangs or the password for the WiFi has changed, there is only one way to reset the Pico W and that is to detonate a nuke in the true sense of the word. First, the Pico W must be connected to the computer. However, while plugging in the USB cable, the BOOTSelect button on the Pico W must be pressed. The Pico W should now show up as a drive again. To reset the Pico W now, we need to untip and then copy [this](https://github.com/RaptusBube/Raspberry-Pi-PicoW-DHT11/files/9933195/PicoW_Nuke.zip) firmware to the folder of the Pico W. The Pico W should now disconnect by itself and reconnect after a short time. After that, the Pico W should be treated as an unused Pico W and can be put on again according to the instructions.
 
 # HomeAssist Integration
 
