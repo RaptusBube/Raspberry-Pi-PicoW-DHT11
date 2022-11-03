@@ -52,7 +52,7 @@ If, contrary to expectations, the software hangs or the password for the WiFi ha
 # HomeAssist Integration
 
 Now we can look at the temperature and humidity via a browser at any time, but this is not really smart yet. To make the Pico W sensor really smart, there is also its own integration in HomeAssist. Since this is a separate script, there is no ready-made integration for it in HomeAssist yet, yet integration is very easy. However, as an add-on we only need the HA Addon Studio Code Server (https://github.com/hassio-addons/addon-vscode). After installing this addon, open the custom user interface. In the left bar the Explorer should be selected and a list of files should appear. The relevant file for us is the configuration.yaml. Just open it and add the following part (it is a rest API configuration):  
-```
+```yaml
 rest:
   - resource: http://xxx.xxx.xxx.xxx/
     scan_interval: 10
