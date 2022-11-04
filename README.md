@@ -66,7 +66,7 @@ rest:
   - resource: http://xxx.xxx.xxx.xxx/
     scan_interval: 10
     sensor:
-      - name: NAMEOFYOUTTEMPSENSOR
+      - name: NAMEOFYOURTEMPSENSOR
         value_template: "{{ value.split(':')[1] }}"
         unit_of_measurement: "°C"
       - name: NAMEOFYOURHUMISENSOR
