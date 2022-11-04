@@ -1,3 +1,12 @@
+[download]: #download
+[discord-invite]: https://discord.gg/2EBCAqp
+[license]: https://github.com/RaptusBube/Raspberry-Pi-PicoW-DHT11/blob/main/LICENSE
+[discord-shield]: https://discord.com/api/guilds/580984045714931713/widget.png
+[license-shield]: https://img.shields.io/badge/License-Apache%202.0-white.svg
+[ ![license-shield][] ][license]
+[ ![discord-shield][] ][discord-invite]
+
+
 # Raspberry-Pi-PicoW-DHT11
 Create a SmartHome-enabled temperature and humidity sensor with an Raspberry Pi Pico W and a DHT11 in python.
 
