@@ -1,8 +1,17 @@
 import socket
-from machine import Pin
-from dht import DHT11
+from machine import Pin, I2C
+from dht import DHT11, InvalidChecksum
 # Select the onboard LED
 html = """%s"""
+
+# while True:
+#     pin = Pin(28, Pin.OUT, Pin.PULL_DOWN)
+#     sensor = DHT11(pin)
+#     try:
+#         print("Temperature: {}".format(sensor.temperature))
+#         print("Humidity: {}".format(sensor.humidity))
+#     except Exception as EX:
+#         print(EX)
 try:
     dht11_sensor = DHT11(Pin(28, Pin.IN, Pin.PULL_UP))
     #Open socket
@@ -12,14 +21,22 @@ try:
     s.listen(1)
 
     print('listening on', addr)
-
     # Listen for connections
+    lasthumi = dht11_sensor.humidity
+    lasttemp = dht11_sensor.temperature
     while True:
       try:
           cl, addr = s.accept()
-          dht11_sensor.measure()
-          temp = dht11_sensor.temperature()
-          humi = dht11_sensor.humidity()
+          
+          try:
+              dht11_sensor.measure()
+              temp = dht11_sensor.temperature()
+              humi = dht11_sensor.humidity()
+              lasttemp = temp
+              lasthumi = humi
+          except Exception as EX:
+              humi = lasthumi
+              temp = lasttemp
           request = cl.recv(1024)
           #print(request)
           request = str(request)
