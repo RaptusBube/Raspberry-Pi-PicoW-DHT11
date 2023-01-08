@@ -13,8 +13,6 @@ wlan.active(False)
 wlan.active(True)
 wlan.connect(ssid, password)
 
-
-# Wait for connect or fail
 max_wait = 10
 while max_wait > 0:
   led.on()
@@ -26,8 +24,6 @@ while max_wait > 0:
   led.off();
   time.sleep(1)
 
-max_wait = 10
-# Handle connection error
 if wlan.status() != 3:
   print('network connection failed')
   exec(open("error.py").read())

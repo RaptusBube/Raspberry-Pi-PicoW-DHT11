@@ -1,6 +1,6 @@
 import time
 import machine
-print("loading tempWebServer")
+print("loading...")
 def startwifi():
     try:
         led = machine.Pin("LED", machine.Pin.OUT)
